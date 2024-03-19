@@ -37,12 +37,14 @@ int main(int argc, char **argv)
     int sum = 0;
     for (int i = 0; i < 4; ++i)
     {
-        sum += s1[i];
         sum -= s2[i];
         if (sum < 0) flag = false;
+        sum += s1[i];
     }
     if (sum > 0) flag = false;
-    cout << flag << endl;
     cout << omp_get_wtime() - t << endl;
+
+    cout << flag << endl;
+
     return 0;
 }
