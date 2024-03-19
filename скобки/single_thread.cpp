@@ -31,7 +31,7 @@ int main()
         }
     }
     if (counter > 0) flag = false;
-    cout << flag << endl;
     cout << omp_get_wtime() - t << endl;
+    cout << flag << endl;
     return 0;
 }
